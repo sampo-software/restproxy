@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace RestProxy.Net.DTO
+{
+    public class IncomingTwilioMessage
+    {
+        public int id { get; set; }
+        public DateTime Timestamp { get; set; }
+        public string AccountSid { get; set; }
+        public string ApiVersion { get; set; }
+        public string Body { get; set; }
+        public string From { get; set; }
+        public string FromCity { get; set; }
+        public string FromCountry { get; set; }
+        public string FromState { get; set; }
+        public string FromZip { get; set; }
+        public string MessageSid { get; set; }
+        public string NumMedia { get; set; }
+        public string NumSegments { get; set; }
+        public string SmsSid { get; set; }
+        public string SmsStatus { get; set; }
+        public string ToState { get; set; }
+        public string To { get; set; }
+        public string ToCity { get; set; }
+        public string ToCountry { get; set; }
+        public string ToZip { get; set; }
+        public string MediaURLs { get; set; }   // Tab-delimited string of URLs pointing to MMS content media files
+
+        public override string ToString()
+        {
+            return $"{From}, {Body}, {MessageSid}, {ApiVersion}, {SmsSid}, {SmsStatus}, {NumSegments}, {ToState}, {AccountSid}, {ToZip}, {FromCountry}, {ToCity}, {FromCity}, {To}, {FromZip}, {ToCountry}, {FromState}, {NumMedia}, {MediaURLs}";
+        }
+    }
+
+}
